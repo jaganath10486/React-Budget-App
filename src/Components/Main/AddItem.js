@@ -1,21 +1,21 @@
 import React, {useState, useContext} from 'react'
 import { AppContext } from '../../Context/ContextApi';
+import { v4 as uuidv4 } from 'uuid';
 
 function AddItem() 
 {
     const {dispatch} = useContext(AppContext);
-    const {dispatch1} = useContext(AppContext);
     const [itemName, setItem] = useState('');
     const [itemCost, setCost] = useState('');
 
     const handleSubmit = (event) => {
-        //event.preventDefault();
+        event.preventDefault();
         console.log(itemName, itemCost);
         const Item = {
+            id :  uuidv4(),
             itemName,
             itemCost
         }
-        dispatch1('INCREMENT');
         dispatch({
             type : 'ADD ITEM',
             value : Item
