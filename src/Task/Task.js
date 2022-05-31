@@ -1,8 +1,10 @@
 import React from 'react'
 import Display from '../Components/Main/display'
 
+
 function Task() 
 {
+  
   return (
     <React.Fragment>
       <div className='row mt-3'>
@@ -26,4 +28,4 @@ function Task()
   )
 }
 
-export default Task
+export default React.memo(Task)

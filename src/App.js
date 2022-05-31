@@ -6,6 +6,11 @@ import Task from './Task/Task';
 import React, {useReducer} from 'react';
 
 import {Appprovider} from './Context/ContextApi';
+import Items from './Components/Main/Items';
+
+const reducerFunction = (state, action) =>{
+
+}
 
 function App() {
 
@@ -19,7 +24,7 @@ function App() {
 
   };
     
-  //const [state, setState] = useReducer(reducerFunction, initialState);
+  const [state, dispatch] = useReducer(reducerFunction, initialState);
 
   return (
     <div className="App">
@@ -31,7 +36,11 @@ function App() {
             <header className="App-header">
               <h1 className ="text-xl-center text-capitalize">Budget App</h1>
             </header>
-            <Task/>   
+            <Appprovider value={{items : state.items, budget : state.budget, dispatch}} >
+              <Task/>
+              <Items/>
+            </Appprovider>
+               
          </div>
       </div>
     </div>
