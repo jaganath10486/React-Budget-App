@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Styles/reset.css';
 import './Styles/App.css';
 import Task from './Task/Task';
+import 'font-awesome/css/font-awesome.min.css';
 
 import React, {useReducer} from 'react';
 
