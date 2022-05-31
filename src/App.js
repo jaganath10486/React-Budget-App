@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Styles/reset.css';
 import './Styles/App.css';
-import Task from './Components/Task/Task';
+import Task from './Task/Task';
 
 import React, {useReducer} from 'react';
 

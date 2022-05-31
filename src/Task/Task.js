@@ -1,5 +1,5 @@
 import React from 'react'
-import Display from '../Main/display'
+import Display from '../Components/Main/display'
 
 function Task() 
 {
