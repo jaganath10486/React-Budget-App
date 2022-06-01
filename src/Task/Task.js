@@ -6,7 +6,8 @@ function Task(props)
 {
   const {budget, items} = useContext(AppContext);
   let spent = items.reduce((total, item) => {return (total + item.itemCost)}, 0);
-  console.log(budget, spent);
+  //console.log(budget, spent);
+  
   return (
     <React.Fragment>
       <div className='row mt-3'>

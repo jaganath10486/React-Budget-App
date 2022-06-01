@@ -7,7 +7,7 @@ function Items() {
 
   return (
     <div className='container' style={{paddingTop : '30px'}}>
-       <h1 class="text-start" style={{paddingBottom : '20px'}}>Expenses </h1>
+       <h1 className="text-start" style={{paddingBottom : '20px'}}>Expenses </h1>
         <ul className="list-group">
            {items.map((item) => (
 				<Item  key = {item.id}  id = {item.id} itemName={item.itemName} itemCost={item.itemCost} />

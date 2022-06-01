@@ -10,6 +10,7 @@ import Budget from './Components/Main/Budget';
 import {Appprovider} from './Context/ContextApi';
 import Items from './Components/Main/Items';
 import AddItem from './Components/Main/AddItem';
+import Message from './Task/Message';
 
 const reducerFunction = (state, action) =>{
   let UpdatedItems;
@@ -73,6 +74,7 @@ function App() {
               <h1 className ="text-xl-center text-capitalize">Budget App</h1>
             </header>
             <Appprovider value={{items : state.items,  budget : state.budget, dispatch}} >
+              <Message/>
               <Budget/>
               <Task HandleBudget = {EditBudget}/>
               <Items/>
