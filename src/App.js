@@ -6,6 +6,7 @@ import 'font-awesome/css/font-awesome.min.css';
 
 import React, {useReducer} from 'react';
 
+import Budget from './Components/Main/Budget';
 import {Appprovider} from './Context/ContextApi';
 import Items from './Components/Main/Items';
 import AddItem from './Components/Main/AddItem';
@@ -58,6 +59,7 @@ function App() {
               <h1 className ="text-xl-center text-capitalize">Budget App</h1>
             </header>
             <Appprovider value={{items : state.items,  budget : state.budget, dispatch}} >
+              <Budget/>
               <Task/>
               <Items/>
               <AddItem/>  
