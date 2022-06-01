@@ -6,8 +6,14 @@ function Display(props)
   return (
     <React.Fragment>
         <div className={`alert alert-${props.className}`}>
-			     <span className='text'>{props.children}</span>
-           <div className='displayMoney'>${props.money}</div>
+			     <span className='text'>{props.text}</span>
+
+           <div className='displayMoney d-flex justify-content-between align-items-center'>
+              &#x20b9;{props.money}
+              <div onClick={props.HandleBudget}>
+               {props.children}
+              </div>
+            </div>
 		    </div>
     </React.Fragment>
   )
