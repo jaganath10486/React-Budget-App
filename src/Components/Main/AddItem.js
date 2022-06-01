@@ -23,7 +23,8 @@ function AddItem()
     }
 
   return (
-    <div className='container'>
+    <div className='container' style={{paddingTop : '20px'}}>
+      <h1 class="text-start" style={{paddingBottom : '15px'}}>Add Expense Item</h1>
         <form onSubmit={handleSubmit}>
 			<div className='row'>
 				<div className='col-sm'>

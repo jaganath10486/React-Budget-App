@@ -23,7 +23,7 @@ function Item(props) {
   const EditItem = () => {
     dispatch({type : 'EDIT ITEM', value : {
       itemName : editItemName,
-      itemCost : editItemCost,
+      itemCost : Number(editItemCost),
       id : props.id
     }})
     
