@@ -1,7 +1,6 @@
 import React, {useContext} from 'react';
 import { AppContext } from '../../Context/ContextApi';
 import Item from './Item';
-import { v4 as uuidv4 } from 'uuid';
 
 function Items() {
    const { items } = useContext(AppContext);

@@ -11,7 +11,6 @@ import Items from './Components/Main/Items';
 import AddItem from './Components/Main/AddItem';
 
 const reducerFunction = (state, action) =>{
-  let items;
   switch(action.type)
   {
     case 'ADD ITEM': 
@@ -40,9 +39,8 @@ const reducerFunction = (state, action) =>{
 function App() {
  
   const initialState = {
-    budget : 2000,
-    items : [
-    ]
+    budget : 20,
+    items : []
 
   };
     

@@ -14,7 +14,7 @@ function AddItem()
         const Item = {
             id :  uuidv4(),
             itemName,
-            itemCost
+            itemCost : Number(itemCost)
         }
         dispatch({
             type : 'ADD ITEM',
