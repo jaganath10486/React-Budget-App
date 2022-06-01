@@ -14,11 +14,22 @@ import AddItem from './Components/Main/AddItem';
 const reducerFunction = (state, action) =>{
   switch(action.type)
   {
-    case 'ADD ITEM': 
+    case 'ADD ITEM':
+       localStorage.setItem('state', JSON.stringify({
+        ...state, items : [...state.items, action.value]
+      }));
       return {
         ...state, items : [...state.items, action.value]
       }
+
     case 'DELETE ITEM':
+      localStorage.setItem('state', JSON.stringify({
+				...state,
+				items: state.items.filter(
+					(expense) => expense.id !== action.value
+				),
+			}))
+
       return {
 				...state,
 				items: state.items.filter(
@@ -27,6 +38,9 @@ const reducerFunction = (state, action) =>{
 			};
 
       case 'EDIT BUDGET':
+        localStorage.setItem('state',JSON.stringify({
+          ...state, budget : action.value
+        }))
         return {
           ...state, budget : action.value
         }
@@ -45,7 +59,8 @@ function App() {
 
   };
     
-  const [state, dispatch] = useReducer(reducerFunction, initialState);
+  let localState = JSON.parse(localStorage.getItem('state')) || initialState;
+  const [state, dispatch] = useReducer(reducerFunction, localState);
 
   const EditBudget = () => {
      console.log('Clicked the edit Button');
