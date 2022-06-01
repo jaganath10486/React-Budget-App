@@ -12,6 +12,7 @@ import Items from './Components/Main/Items';
 import AddItem from './Components/Main/AddItem';
 
 const reducerFunction = (state, action) =>{
+  let UpdatedItems;
   switch(action.type)
   {
     case 'ADD ITEM':
@@ -31,6 +32,12 @@ const reducerFunction = (state, action) =>{
       case 'EDIT BUDGET':
         return {
           ...state, budget : action.value
+        }
+
+      case 'EDIT ITEM':
+        UpdatedItems = state.items.filter(item => item.id !== action.value.id);
+        return {
+          ...state, items : [...UpdatedItems, action.value]
         }
       default:
         return state
