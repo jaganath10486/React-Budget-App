@@ -8,9 +8,9 @@ import React, {useReducer} from 'react';
 
 import Budget from './Components/Main/Budget';
 import {Appprovider} from './Context/ContextApi';
-import Items from './Components/Main/Items';
 import AddItem from './Components/Main/AddItem';
 import Message from './Task/Message';
+import Search from './Components/Main/Search';
 
 const reducerFunction = (state, action) =>{
   let UpdatedItems;
@@ -77,7 +77,7 @@ function App() {
               <Message/>
               <Budget/>
               <Task HandleBudget = {EditBudget}/>
-              <Items/>
+              <Search/>
               <AddItem/>  
             </Appprovider>
                         
