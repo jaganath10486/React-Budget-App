@@ -1,16 +1,15 @@
-import React, {useContext} from 'react';
-import { AppContext } from '../../Context/ContextApi';
+import React from 'react';
+
 import Item from './Item';
 
-function Items() {
-   const { items } = useContext(AppContext);
-
+function Items(props) 
+{
+   
   return (
-    <div className='container' style={{paddingTop : '30px'}}>
-       <h1 className="text-start" style={{paddingBottom : '20px'}}>Expenses </h1>
+    <div  style={{paddingTop : '30px'}}>
         <ul className="list-group">
-           {items.map((item) => (
-				<Item  key = {item.id}  id = {item.id} itemName={item.itemName} itemCost={item.itemCost} />
+           {props.ResultedItems.map((item) => (
+			  	<Item  key = {item.id}  id = {item.id} itemName={item.itemName} itemCost={item.itemCost} />
 			))}
         </ul>
     </div>
