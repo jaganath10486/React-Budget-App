@@ -47,6 +47,9 @@ function App() {
     
   const [state, dispatch] = useReducer(reducerFunction, initialState);
 
+  const EditBudget = () => {
+     console.log('Clicked the edit Button');
+  }
 
   return (
     <div className="App">
@@ -60,7 +63,7 @@ function App() {
             </header>
             <Appprovider value={{items : state.items,  budget : state.budget, dispatch}} >
               <Budget/>
-              <Task/>
+              <Task HandleBudget = {EditBudget}/>
               <Items/>
               <AddItem/>  
             </Appprovider>
