@@ -10,7 +10,7 @@ function AddItem()
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(itemName, itemCost);
+        //console.log(itemName, itemCost);
         const Item = {
             id :  uuidv4(),
             itemName,

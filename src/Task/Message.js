@@ -6,7 +6,7 @@ import styles from '../Styles/Message.module.css';
 function Message() {
 
     const [display, setDisplay] = useState(true);
-    console.log(display);
+    //console.log(display);
 
     const {budget, items} = useContext(AppContext);
 
@@ -18,8 +18,8 @@ function Message() {
 
     const handleDisplay = () => {
         setDisplay(!display);
-        console.log(display);
-        console.log('Clicked');
+        //console.log(display);
+        //console.log('Clicked');
     }
 
   return (

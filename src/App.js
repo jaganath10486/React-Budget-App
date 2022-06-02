@@ -60,7 +60,7 @@ function App() {
   localStorage.setItem('state', JSON.stringify(state));
 
   const EditBudget = () => {
-     console.log('Clicked the edit Button');
+     //console.log('Clicked the edit Button');
   }
 
   return (
