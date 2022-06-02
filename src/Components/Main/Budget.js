@@ -11,6 +11,7 @@ function Budget() {
             type : 'EDIT BUDGET',
             value : budget}
         )
+        setBudget('');
     }
 
   return (
