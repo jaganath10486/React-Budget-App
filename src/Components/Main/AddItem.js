@@ -20,6 +20,8 @@ function AddItem()
             type : 'ADD ITEM',
             value : Item
         })
+        setItem('');
+        setCost('');
     }
 
   return (
