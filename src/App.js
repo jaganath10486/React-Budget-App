@@ -3,7 +3,7 @@ import './Styles/reset.css';
 import './Styles/App.css';
 import Task from './Task/Task';
 import 'font-awesome/css/font-awesome.min.css';
-
+import Footer from './Components/Main/Footer';
 import React, {useReducer} from 'react';
 
 import Budget from './Components/Main/Budget';
@@ -80,7 +80,7 @@ function App() {
               <Search/>
               <AddItem/>  
             </Appprovider>
-                        
+            <Footer/>          
          </div>
       </div>
     </div>
