@@ -9,7 +9,7 @@ function Item(props) {
   const [editItemCost, setEditItemCost]= useState(props.itemCost);
 
   const deleteItem = () => {
-    console.log(props.id + 'This ');
+    //console.log(props.id + 'This ');
     dispatch({
       type : 'DELETE ITEM',
       value : props.id
