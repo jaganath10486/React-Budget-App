@@ -4,13 +4,13 @@ function Footer() {
   return (
     <div className='mb-2 footer' style={{marginTop : '50px'}}>
        
-        <div class="social d-flex justify-content-center">
-            <a href="https://www.instagram.com/___jaganath__as_dj_104/"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
-            <a href="https://github.com/jaganath10486"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/segi-jaganath-9b81ba240/"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+        <div className="social d-flex justify-content-center">
+            <a href="https://www.instagram.com/___jaganath__as_dj_104/"><i className="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+            <a href="https://github.com/jaganath10486"><i className="fa fa-github fa-3x" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/segi-jaganath-9b81ba240/"><i className="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
         </div>
         <div className='xyz'>
-        <h4 class="text-center" style={{color : '#aaa'}}>Made by snjnr</h4>
+        <h4 className="text-center" style={{color : '#aaa'}}>Made by snjnr</h4>
         </div>
     </div>
   )
